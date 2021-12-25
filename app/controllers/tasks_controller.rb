@@ -5,7 +5,6 @@ class TasksController < ApplicationController
   
   def index
     
-      @tasks = current_user.tasks.build  # form_with 用
       @tasks = Task.all
     
   end
