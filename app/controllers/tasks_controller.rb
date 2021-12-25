@@ -5,8 +5,8 @@ class TasksController < ApplicationController
   
   def index
     
-      @task = current_user.tasks.build  # form_with 用
-      @pagy,@tasks = pagy(current_user.tasks.order(id: :desc))
+      @tasks = current_user.tasks.build  # form_with 用
+      @tasks = Task.all
     
   end
 
@@ -64,6 +64,5 @@ class TasksController < ApplicationController
       redirect_to root_url
     end
   end
+  
 end
-
-
